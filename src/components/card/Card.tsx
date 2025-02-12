@@ -21,7 +21,13 @@ const Card = () => {
 
   return (
     <>
-      <Paper sx={{ width: "350px", height: "500px" }}>
+      <Paper
+        sx={{
+          width: "350px",
+          height: "500px",
+          backgroundImage: "url(/public/cardBackground.svg)",
+        }}
+      >
         <Box>
           <Typography>{currentItem.text}</Typography>
         </Box>
