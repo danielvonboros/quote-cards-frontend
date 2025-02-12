@@ -20,15 +20,16 @@ const Card = () => {
   const currentItem = mockCardContent[currentCard];
 
   return (
-    <Paper sx={{ width: "350px", height: "500px" }}>
-      <Box sx={{ my: "auto" }}>
-        <Typography>{currentItem.text}</Typography>
-      </Box>
-      <Box>
-        <Button onClick={goToPrevious}> (-) </Button>
-        <Button onClick={goToNext}> (+) </Button>
-      </Box>
-    </Paper>
+    <>
+      <Paper sx={{ width: "350px", height: "500px" }}>
+        <Box>
+          <Typography>{currentItem.text}</Typography>
+        </Box>
+      </Paper>
+      <Button onClick={goToPrevious}> (-) </Button>
+      <Button>FAV</Button>
+      <Button onClick={goToNext}> (+) </Button>
+    </>
   );
 };
 
