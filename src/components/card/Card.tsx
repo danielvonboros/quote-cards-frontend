@@ -25,11 +25,31 @@ const Card = () => {
         sx={{
           width: "350px",
           height: "500px",
-          backgroundImage: "url(/public/cardBackground.svg)",
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
+          url('/public/cardBackground.svg')`,
+          borderRadius: "50px",
         }}
       >
-        <Box>
-          <Typography>{currentItem.text}</Typography>
+        <Box
+          sx={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            p: 3,
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: "26px",
+              color: "black",
+              textShadow: "2px 2px #ababab",
+            }}
+          >
+            {currentItem.text}
+          </Typography>
         </Box>
       </Paper>
       <Button onClick={goToPrevious}> (-) </Button>
