@@ -19,6 +19,9 @@ const Card = () => {
 
   const currentItem = mockCardContent[currentCard];
 
+  // const processBackgroundImage =
+  // case
+
   return (
     <>
       <Paper
@@ -26,7 +29,7 @@ const Card = () => {
           width: "350px",
           height: "500px",
           backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
-          url('/public/cardBackground.svg')`,
+          url('cardBackgroundYellow.svg')`,
           borderRadius: "50px",
         }}
       >
