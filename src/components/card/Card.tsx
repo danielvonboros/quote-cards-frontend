@@ -19,8 +19,20 @@ const Card = () => {
 
   const currentItem = mockCardContent[currentCard];
 
-  // const processBackgroundImage =
-  // case
+  let processBackgroundImage: unknown = "";
+  switch (currentItem.color) {
+    case 0:
+      processBackgroundImage = `url('/cardBackgroundYellow.svg')`;
+      break;
+    case 1:
+      processBackgroundImage = `url('/cardBackgroundRedBlue.svg')`;
+      break;
+    case 2:
+      processBackgroundImage = `url('/cardBackgroundGreen.svg')`;
+      break;
+    default:
+      processBackgroundImage = `url('/cardBackgroundGreen.svg')`;
+  }
 
   return (
     <>
@@ -29,7 +41,7 @@ const Card = () => {
           width: "350px",
           height: "500px",
           backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
-          url('cardBackgroundYellow.svg')`,
+          ${processBackgroundImage}`,
           borderRadius: "50px",
         }}
       >
