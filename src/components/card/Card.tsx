@@ -1,6 +1,10 @@
-import { Box, Button, Paper, Typography } from "@mui/material";
+import { Box, IconButton, Paper, SvgIcon, Typography } from "@mui/material";
 import { mockCardContent } from "./mockCardContent";
 import { useState } from "react";
+
+import HeartOutline from "../../assets/icons/heartOutline.svg?react";
+import ChevronLeft from "../../assets/icons/chevronLeft.svg?react";
+import ChevronRight from "../../assets/icons/chevronRight.svg?react";
 
 const Card = () => {
   const [currentCard, setCurrentCard] = useState(0);
@@ -19,7 +23,7 @@ const Card = () => {
 
   const currentItem = mockCardContent[currentCard];
 
-  let processBackgroundImage: unknown = "";
+  let processBackgroundImage: string = "";
   switch (currentItem.color) {
     case 0:
       processBackgroundImage = `url('/cardBackgroundYellow.svg')`;
@@ -61,15 +65,22 @@ const Card = () => {
               fontSize: "26px",
               color: "black",
               textShadow: "2px 2px #ababab",
+              fontFamily: "Poppins",
             }}
           >
             {currentItem.text}
           </Typography>
         </Box>
       </Paper>
-      <Button onClick={goToPrevious}> (-) </Button>
-      <Button>FAV</Button>
-      <Button onClick={goToNext}> (+) </Button>
+      <IconButton onClick={goToPrevious}>
+        <SvgIcon sx={{ fill: "none" }} component={ChevronLeft} />
+      </IconButton>
+      <IconButton>
+        <SvgIcon component={HeartOutline} />
+      </IconButton>
+      <IconButton onClick={goToNext}>
+        <SvgIcon sx={{ fill: "none" }} component={ChevronRight} />
+      </IconButton>
     </>
   );
 };

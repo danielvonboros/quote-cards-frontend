@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
-  url('/public/aaabstract.webp');
+  url('/aaabstract.webp');
 }
 
 #root {
@@ -8,5 +8,6 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
 }
 
